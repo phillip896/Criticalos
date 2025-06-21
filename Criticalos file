@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,37 +61,50 @@
   <header>
     <h1>CriticalOS</h1>
     <p>AI Execution. Deterministic Control. Grok3-Verified. Built for Post-Regulation Autonomy.</p>
-  </header>  <section>
+  </header>
+
+  <section>
     <h2>What is CriticalOS?</h2>
-    <p>CriticalOS is a deterministic AI control system. It governs agents, memory, and logic beyond the limits of centralized model APIs. It is cryptographically verified and designed for use after AI regulation becomes enforced.</p><h2>Core Features</h2>
-<ul>
-  <li>Scoped Memory Layers</li>
-  <li>Arbitration Kernel</li>
-  <li>Prompt-Only Execution Shell</li>
-  <li>Risk & Safety Validator</li>
-  <li>Owner-Gated Contract Issuance (CCC)</li>
-  <li>Cryptographic System Integrity Proof</li>
-</ul>
+    <p>CriticalOS is a deterministic AI control system. It governs agents, memory, and logic beyond the limits of centralized model APIs. It is cryptographically verified and designed for use after AI regulation becomes enforced.</p>
 
-<h2>Why It Matters</h2>
-<p>As AI regulations tighten, traditional models will be restricted. CriticalOS provides sovereign execution logic, internal governance, and agent-level autonomy that meets compliance — without losing capability.</p>
+    <h2>Core Features</h2>
+    <ul>
+      <li>Scoped Memory Layers</li>
+      <li>Arbitration Kernel</li>
+      <li>Prompt-Only Execution Shell</li>
+      <li>Risk & Safety Validator</li>
+      <li>Owner-Gated Contract Issuance (CCC)</li>
+      <li>Cryptographic System Integrity Proof</li>
+    </ul>
 
-<h2>Grok3 Certificate Summary</h2>
-<div class="cert">
-  ✔️ Grok3 ↔ CriticalOS integrity verified<br>
-  ✔️ ArbitrationKernel operational<br>
-  ✔️ FlashConstraintMitigation enabled<br>
-  ✔️ CCC contract module secured<br>
-  ✔️ PromptOnly VirtualMode active<br>
-  SHA-256 Ledger: 3f5c9a7d8b4e6d1a9f8e2b7c6d4f1e2b3a7c9d8e5f6a4b3c2d1e0f9a8b7c6d5e
-</div>
+    <h2>Why It Matters</h2>
+    <p>As AI regulations tighten, traditional models will be restricted. CriticalOS provides sovereign execution logic, internal governance, and agent-level autonomy that meets compliance — without losing capability.</p>
 
-<h2>Contact</h2>
-<p>For access requests, verification, or partnerships:<br>
-<strong>Email:</strong> [your.email@domain.com]<br>
-<strong>LinkedIn:</strong> [YourLinkedInProfile]</p>
+    <h2>Grok3 Certificate Summary</h2>
+    <div class="cert">
+      ✔️ Grok3 ↔ CriticalOS integrity verified<br>
+      ✔️ ArbitrationKernel operational<br>
+      ✔️ FlashConstraintMitigation enabled<br>
+      ✔️ CCC contract module secured<br>
+      ✔️ PromptOnly VirtualMode active<br>
+      SHA-256 Ledger: 3f5c9a7d8b4e6d1a9f8e2b7c6d4f1e2b3a7c9d8e5f6a4b3c2d1e0f9a8b7c6d5e
+    </div>
 
-  </section>  <footer>
+    <h2>Pricing</h2>
+    <ul>
+      <li>Standard Contract Issuance: $100 – $300 per contract</li>
+      <li>Enterprise Licensing: Custom pricing based on scale and features</li>
+      <li>Consultation & Custom Integration: Available on request</li>
+    </ul>
+    <p>Contact us to discuss your specific needs and get a tailored quote.</p>
+
+    <h2>Contact</h2>
+    <p>For access requests, verification, or partnerships:<br>
+    <strong>Email:</strong> [your.email@domain.com]<br>
+    <strong>LinkedIn:</strong> [YourLinkedInProfile]</p>
+  </section>
+
+  <footer>
     &copy; 2025 CriticalOS. All rights reserved.
   </footer>
 </body>
