@@ -1,0 +1,17 @@
+name: MathCode Axiom Verification
+on: [push]
+
+jobs:
+  verify-sovereignty:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Sovereign Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python Environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Execute Sovereign Bridge
+        run: python kernel_bridge.py
