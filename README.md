@@ -15,3 +15,4 @@ MathCode Sovereign Kernel (CriticalOS)
 ​LAYER_A: Axiomatic Circuit Breaker (The Guardrail).
 ​🛡️ Sovereign Protection
 ​This repository is governed by the AGPL-3.0 License. Any fork or derivative must remain open-source and preserve the integrity of the Axioms. Any injection of logical entropy will be identified by the hash chain and rejected by the Kernel.
+![MathCode Framework](file_00000000eee071fdb325e9f2284468f9.png)
