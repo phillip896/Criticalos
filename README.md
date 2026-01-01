@@ -21,4 +21,4 @@ MathCode Sovereign Kernel (CriticalOS)
 In 2026, complexity is entropy. This kernel follows the **Minimal Correct Path (MCP)**. 
 - **Minimalism ≡ Power**: A small, perfect codebase is invulnerable to the bugs hidden in "bloat."
 - **Deterministic Truth**: We do not guess; we hash. If it cannot be proven, it cannot execute.
-- **Sovereign Efficiency**: High-level execution requires the removal of all unnecessary logic.
+- **Sovereign Efficiency**: High-level execution requires the removal of all unnecessary logic. 
