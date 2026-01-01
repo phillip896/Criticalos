@@ -7,6 +7,7 @@
 
 import hashlib
 import json
+import os
 
 class MathCodeKernel:
     def __init__(self, owner="Phillip_NelFx"):
@@ -17,32 +18,42 @@ class MathCodeKernel:
         raw_data = f"{self.owner}{timestamp}{message}{status}"
         return hashlib.sha256(raw_data.encode()).hexdigest()
 
-    # --- NEW LAYER 3 LOGIC: THE MCP SOLVER ---
-    def mcp_solver(self, logic_path):
+    # --- LAYER 4: SOVEREIGN BRIDGE (SENTINEL) ---
+    def sentinel_audit(self, file_path):
         """
-        Axiom A3: Least Action Principle. 
-        Calculates Entropy vs Truth to find the Minimal Correct Path.
+        Layer 4: Hardware-Logic Isomorphism.
+        Checks if the file exists and is not empty (Physical Truth).
         """
-        complexity = len(logic_path)
-        # In MathCode, Truth is the inverse of unnecessary entropy
-        truth_score = 1.0 / (1.0 + complexity) 
-        
-        if truth_score > 0.1: # Threshold for a 'Correct Path'
-            return "MCP_VALIDATED"
-        return "ENTROPY_ABORT"
+        if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+            return "BRIDGE_STABLE"
+        return "BRIDGE_COLLAPSED"
 
-    def verify_logic(self, input_message):
-        live_timestamp = "2026-01-01T17:42:00Z"
+    def mcp_solver(self, logic_path):
+        # Layer 3: Least Action Principle
+        complexity = len(logic_path)
+        truth_score = 1.0 / (1.0 + complexity) 
+        return "MCP_VALIDATED" if truth_score > 0.1 else "ENTROPY_ABORT"
+
+    def verify_logic(self, input_message, target_file="exodus_paradox.py"):
+        live_timestamp = "2026-01-01T18:18:00Z"
         
-        # Consult Layer 3 Solver
+        # Step 1: Layer 4 Sentinel Audit (Physical Truth)
+        bridge_status = self.sentinel_audit(target_file)
+        
+        # Step 2: Layer 3 MCP Solver (Logical Truth)
         solver_verdict = self.mcp_solver(input_message)
-        module_status = "EXECUTION_SUCCESS" if solver_verdict == "MCP_VALIDATED" else "ABORT_EXECUTION"
+        
+        # Combined Governance Protocol
+        if bridge_status == "BRIDGE_STABLE" and solver_verdict == "MCP_VALIDATED":
+            module_status = "EXECUTION_SUCCESS"
+        else:
+            module_status = "ABORT_EXECUTION"
         
         state_hash = self.generate_state_hash(live_timestamp, input_message, module_status)
         
         return {
             "status": module_status,
-            "proof_chain_hash": state_hash,
-            "mcp_verdict": solver_verdict,
-            "message": f"Path analysis: {solver_verdict}"
+            "layer_4_bridge": bridge_status,
+            "layer_3_mcp": solver_verdict,
+            "proof_chain_hash": state_hash
         }
