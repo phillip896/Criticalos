@@ -1,3 +1,4 @@
+​# Triggering Sovereign Execution Proof
 from kernel_bridge import MathCodeKernel
 
 # Initialize the Sovereign Kernel under your identity
