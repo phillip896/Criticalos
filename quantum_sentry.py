@@ -1,3 +1,10 @@
+# -------------------------------------------------------------------------
+# MathCode Sovereign Kernel - Part of CriticalOS
+# Copyright (C) 2026 Phillip_NelFx
+# Licensed under the GNU Affero General Public License v3.0 (AGPL-3.0)
+# "Logic is Execution. Deterministic Sovereignty Active."
+# -------------------------------------------------------------------------
+
 import hashlib
 import time
 
