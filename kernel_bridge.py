@@ -24,9 +24,17 @@ class MathCodeKernel:
         }
     }
 
-    def __init__(self, owner="Phillip_NelFx"):
-        self.owner = owner
-        print(f"KERNEL_IDENTITY_LOCK: {self.owner} VERIFIED")
+        def __init__(self, owner=None):
+        # Physical Truth: Identity must match the DNA seed
+        authorized = self.JSON_SEED["architect"]
+        
+        if owner != authorized:
+            print(f"IDENTITY_VIOLATION: {owner} is not authorized.")
+            raise PermissionError(f"Logic Gap detected: Execution halted.")
+            
+        self.owner = authorized
+        print(f"KERNEL_IDENTITY_LOCK: {self.owner} VERIFIED via JSON_SEED")
+
 
     def generate_state_hash(self, timestamp, message, status):
         raw_data = f"{self.owner}{timestamp}{message}{status}"
