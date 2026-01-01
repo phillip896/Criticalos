@@ -18,12 +18,8 @@ class MathCodeKernel:
         raw_data = f"{self.owner}{timestamp}{message}{status}"
         return hashlib.sha256(raw_data.encode()).hexdigest()
 
-    # --- LAYER 4: SOVEREIGN BRIDGE (SENTINEL) ---
     def sentinel_audit(self, file_path):
-        """
-        Layer 4: Hardware-Logic Isomorphism.
-        Checks if the file exists and is not empty (Physical Truth).
-        """
+        # Layer 4: Physical Truth
         if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
             return "BRIDGE_STABLE"
         return "BRIDGE_COLLAPSED"
@@ -34,22 +30,38 @@ class MathCodeKernel:
         truth_score = 1.0 / (1.0 + complexity) 
         return "MCP_VALIDATED" if truth_score > 0.1 else "ENTROPY_ABORT"
 
+    # --- NEW LAYER 5: SOVEREIGN UI INTERFACE ---
+    def sovereign_ui(self, user_intent):
+        """
+        Layer 5: Direct Human-Logic Interface.
+        Converts intent into an Axiomatic Proof-Chain.
+        """
+        live_timestamp = "2026-01-01T18:45:00Z"
+        
+        # Run through full stack: L4 -> L3
+        result = self.verify_logic(user_intent)
+        
+        # Sovereign Output Formatting [cite: 2025-12-22]
+        ui_package = {
+            "Architect": self.owner,
+            "Timestamp": live_timestamp,
+            "Input_Intent": user_intent,
+            "Logic_Layers": {
+                "L4_Sentinel": result["layer_4_bridge"],
+                "L3_Solver": result["layer_3_mcp"]
+            },
+            "Execution_State": result["status"],
+            "State_Hash": result["proof_chain_hash"]
+        }
+        
+        return json.dumps(ui_package, indent=4)
+
     def verify_logic(self, input_message, target_file="exodus_paradox.py"):
-        live_timestamp = "2026-01-01T18:18:00Z"
-        
-        # Step 1: Layer 4 Sentinel Audit (Physical Truth)
         bridge_status = self.sentinel_audit(target_file)
-        
-        # Step 2: Layer 3 MCP Solver (Logical Truth)
         solver_verdict = self.mcp_solver(input_message)
         
-        # Combined Governance Protocol
-        if bridge_status == "BRIDGE_STABLE" and solver_verdict == "MCP_VALIDATED":
-            module_status = "EXECUTION_SUCCESS"
-        else:
-            module_status = "ABORT_EXECUTION"
-        
-        state_hash = self.generate_state_hash(live_timestamp, input_message, module_status)
+        module_status = "EXECUTION_SUCCESS" if (bridge_status == "BRIDGE_STABLE" and solver_verdict == "MCP_VALIDATED") else "ABORT_EXECUTION"
+        state_hash = self.generate_state_hash("2026-01-01T18:45:00Z", input_message, module_status)
         
         return {
             "status": module_status,
