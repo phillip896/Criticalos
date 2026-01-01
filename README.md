@@ -16,3 +16,9 @@ MathCode Sovereign Kernel (CriticalOS)
 ​🛡️ Sovereign Protection
 ​This repository is governed by the AGPL-3.0 License. Any fork or derivative must remain open-source and preserve the integrity of the Axioms. Any injection of logical entropy will be identified by the hash chain and rejected by the Kernel.
 ![MathCode Framework](file_00000000eee071fdb325e9f2284468f9.png)
+---
+## ⚖️ The Manifesto of Least Action (A3)
+In 2026, complexity is entropy. This kernel follows the **Minimal Correct Path (MCP)**. 
+- **Minimalism ≡ Power**: A small, perfect codebase is invulnerable to the bugs hidden in "bloat."
+- **Deterministic Truth**: We do not guess; we hash. If it cannot be proven, it cannot execute.
+- **Sovereign Efficiency**: High-level execution requires the removal of all unnecessary logic.
