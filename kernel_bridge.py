@@ -1,3 +1,8 @@
+import hashlib
+import json
+import os
+
+
 class MathCodeKernel:
     # THE SOVEREIGN SEED: The DNA of MathCode
     JSON_SEED = {
