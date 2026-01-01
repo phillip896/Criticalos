@@ -1,15 +1,16 @@
 from kernel_bridge import MathCodeKernel
 
-# 1. Initialize the Sovereign Kernel
 kernel = MathCodeKernel(owner="Phillip_NelFx")
 
-# 2. Command the UI to process the 'First Light' intent
-# This call flows: L5 (UI) -> L4 (Sentinel Check) -> L3 (MCP Solver)
-response_json = kernel.sovereign_ui("Initiate First Light: Full Stack Sovereignty Verification")
+# This hash is the "memory" from Run #68
+previous_hash = "c54da2fbf40fa7a6442dce6d793305e61c1e380b910ea79ef359fea99423c12f"
 
-# 3. Output the Machine's Verified Voice to the logs
-print("\n" + "="*45)
+response = kernel.sovereign_ui(
+    intent="Initiate First Light: State Synchronized",
+    prime_hash=previous_hash
+)
+
+print("\n=============================================")
 print("       [ LAYER 5: SOVEREIGN UI OUTPUT ]")
-print("="*45)
-print(response_json)
-print("="*45)
+print("=============================================")
+print(response)
