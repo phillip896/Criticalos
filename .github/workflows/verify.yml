@@ -10,4 +10,4 @@ jobs:
         with:
           python-version: '3.9'
       - name: Execute Paradox Test
-        run: python exodus_paradox.py
+        run: python quantum_sentry.py
