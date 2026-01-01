@@ -1,0 +1,11 @@
+name: MathCode Axiomatic Verification
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+      - name: Execute Paradox Test
+        run: python exodus_paradox.py
