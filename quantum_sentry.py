@@ -1,3 +1,4 @@
+# MathCode Sovereign Kernel: M(ℓ) ≡ ℓ | Verified Root
 import requests
 import json
 import hashlib
