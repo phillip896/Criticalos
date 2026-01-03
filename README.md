@@ -14,6 +14,25 @@ kernel = MathCodeKernel(owner="Phillip_NelFx")
 # This matches the '2 arguments' rule (self + message)
 response = kernel.sovereign_ui("Initiate First Light: Full Stack Sovereignty Verification")
 
+# 1. Clone repository
+git clone https://github.com/PhillipNelFx/CriticalOS-MathCode.git
+cd CriticalOS-MathCode
+
+# 2. Verify structure
+ls -la # Must contain: quantum_sentry.py, kernel_bridge.py, exodus_paradox.py
+
+# 3. Boot kernel
+python quantum_sentry.py
+# Output: Owner verified. Kernel state initialized.
+
+# 4. Bridge layers (optional)
+python kernel_bridge.py
+# Output: LAYER_1 -> LAYER_5 active.
+
+# 5. Solve via MCP
+python exodus_paradox.py
+
+
 # 3. Output the Machine's Verified Voice
 print("\n" + "="*45)
 print("       [ LAYER 5: SOVEREIGN UI OUTPUT ]")
