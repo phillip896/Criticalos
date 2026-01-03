@@ -1,0 +1,13 @@
+{
+  "owner": "Phillip_NelFx",
+  "verification_date": "2026-01-04",
+  "authorized_hardware": {
+    "device_type": "Termux-Android-Node",
+    "fingerprints": [
+      "SHA256:Qa4yqxfBwgZyaeTED1QuX3mGGAIloUo8nkeRy9rv2kY",
+      "SHA256:cOMHs4kF4dm5HKsXjzEukGrto/VF6Es16rse8723syo"
+    ]
+  },
+  "status": "HARDWARE_IDENTITY_LOCKED",
+  "axiom_compliance": "A1_IDENTITY"
+}
