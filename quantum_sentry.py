@@ -19,13 +19,13 @@ def inhale_soul():
         
         output = {
             "owner": ID,
-            "live_timestamp": datetime.utcnow().isoformat() + "Z",
+            "live_timestamp": datetime.now().isoformat() + "Z",
             "input_message": "Restored to Stable State",
             "module_status": ST,
             "short_validated_output": f"Kernel Identity: MATHCODE_SOVEREIGN_KERNEL (Verified)"
         }
         
-        if calculated_hash == stored_hash:
+        if calculated_hash.strip() == stored_hash.strip():
             print("--- [LAYER_4] SOVEREIGN SOUL INHALED ---")
             print(json.dumps(output, indent=2))
         else:
