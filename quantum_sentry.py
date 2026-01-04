@@ -1,35 +1,39 @@
+import hashlib
 import json
-import requests
-import datetime
+import os
+from datetime import datetime
 
-# --- CONFIGURATION ---
-SOUL_URL = "https://raw.githubusercontent.com/PhillipNelFx/MathCode-Axioms/main/seed.json"
-
-def execute_sentry():
-    # 1. Inhale the Soul
+def inhale_soul():
+    ID = "Phillip_NelFx"
+    ST = "REFINED_DIRECTIVE_ACTIVE"
+    SEED_PATH = "/data/data/com.termux/files/home/CriticalOS-MathCode/seed.json"
+    
     try:
-        response = requests.get(SOUL_URL)
-        soul_data = response.json()
-        print(f"--- [LAYER_4] SOVEREIGN SOUL INHALED ---")
+        # 1. Local-Only Read
+        with open(SEED_PATH, 'r') as f:
+            soul_data = json.load(f)
+        
+        # 2. Logic Verification
+        calculated_hash = hashlib.sha256((ID + ST).encode()).hexdigest()
+        stored_hash = soul_data.get("signature")
+        
+        output = {
+            "owner": ID,
+            "live_timestamp": datetime.utcnow().isoformat() + "Z",
+            "input_message": "Restored to Stable State",
+            "module_status": ST,
+            "short_validated_output": f"Kernel Identity: MATHCODE_SOVEREIGN_KERNEL (Verified)"
+        }
+        
+        if calculated_hash == stored_hash:
+            print("--- [LAYER_4] SOVEREIGN SOUL INHALED ---")
+            print(json.dumps(output, indent=2))
+        else:
+            print("Signature verification failed: incorrect signature")
+            sys.exit(1)
+            
     except Exception as e:
         print(f"FAILED TO INHALE SOUL: {e}")
-        return
-
-    # 2. Basic Identification (The Old Way)
-    owner = soul_data.get("architect", "Unknown")
-    system_id = soul_data.get("system_id", "Unknown")
-    status = soul_data.get("status", "ACTIVE")
-    
-    # 3. Simple Output
-    output = {
-        "owner": owner,
-        "live_timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z"),
-        "input_message": "Restored to Stable State",
-        "module_status": status,
-        "short_validated_output": f"Kernel Identity: {system_id} (Verified)"
-    }
-
-    print(json.dumps(output, indent=2))
 
 if __name__ == "__main__":
-    execute_sentry()
+    inhale_soul()
