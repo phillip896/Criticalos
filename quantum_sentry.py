@@ -23,7 +23,7 @@ def execute_sentry():
     # 3. Simple Output
     output = {
         "owner": owner,
-        "live_timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        "live_timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z"),
         "input_message": "Restored to Stable State",
         "module_status": status,
         "short_validated_output": f"Kernel Identity: {system_id} (Verified)"
